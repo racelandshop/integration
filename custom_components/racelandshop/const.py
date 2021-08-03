@@ -3,7 +3,7 @@ from aiogithubapi.common.const import ACCEPT_HEADERS
 
 NAME_LONG = "RACELANDSHOP (Home Assistant Community Store)"
 NAME_SHORT = "RACELANDSHOP"
-INTEGRATION_VERSION = "main"
+INTEGRATION_VERSION = "1.0.0"
 DOMAIN = "racelandshop"
 CLIENT_ID = "1234e8c7719876033112"
 MINIMUM_HA_VERSION = "2021.2.0"
