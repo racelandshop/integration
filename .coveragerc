@@ -1,0 +1,20 @@
+[run]
+source = custom_components
+
+omit =
+    # omit pieces of code that rely on external API calls
+    # These should be mocked one day....
+    custom_components/racelandshop/helpers/get_defaults.py
+    custom_components/racelandshop/operational/setup_actions/load_racelandshop_repository.py
+    custom_components/racelandshop/operational/factory.py
+    custom_components/racelandshop/operational/relaod.py
+    custom_components/racelandshop/operational/remove.py
+    custom_components/racelandshop/operational/setup.py
+    custom_components/racelandshop/config_flow.py
+    custom_components/racelandshop/__init__.py
+
+    # omit setup
+    custom_components/setup.py
+
+    # omit tests
+    tests/*

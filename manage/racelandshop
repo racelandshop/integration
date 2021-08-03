@@ -1,0 +1,15 @@
+ #!/bin/bash
+
+function racelandshop-update-requirements {
+    echo "Updating requirements."
+    python3 ./manage/update_requirements.py
+    echo "Update done."
+}
+
+
+
+## Install JQ if missing
+if [[ -z $(which jq) ]]; then
+    echo "Installing JQ"
+    apk add jq
+fi

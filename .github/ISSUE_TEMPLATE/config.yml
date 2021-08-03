@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature request
+    url: https://github.com/racelandshop/integration/discussions/1909
+    about: Suggest an idea for this project
+  - name: How to file an issue/feature request
+    url: https://racelandshop.xyz/docs/issues
+    about: Describes what an issue/feature request should contain
+  - name: RACELANDSHOP Documentation
+    url: https://racelandshop.xyz/
+    about: The documentation for RACELANDSHOP
+  - name: RACELANDSHOP Discord server
+    url: https://discord.gg/apgchf8
+    about: For questions about RACELANDSHOP
