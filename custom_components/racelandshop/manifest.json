@@ -20,8 +20,8 @@
         "aiogithubapi>=21.4.0",
         "awesomeversion>=21.2.2",
         "backoff>=1.10.0",
-        "racelandshop_frontend==20210730.1",
+        "racelandshop_frontend==20210730.3",
         "queueman==0.5"
     ],
-    "version": "0.0.0"
+    "version": "1.0.0"
 }
