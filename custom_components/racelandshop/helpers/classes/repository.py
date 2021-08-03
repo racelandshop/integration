@@ -276,7 +276,7 @@ class RacelandshopRepository(RepositoryHelpers):
         await self.repository_object.set_last_commit()
         self.data.last_commit = self.repository_object.last_commit
 
-        # Get the content of racelandshop.json
+        # Get the content of hacs.json
         await self.get_repository_manifest_content()
 
         # Update "info.md"
@@ -350,20 +350,20 @@ class RacelandshopRepository(RepositoryHelpers):
         return validate
 
     async def get_repository_manifest_content(self):
-        """Get the content of the racelandshop.json file."""
-        if not "racelandshop.json" in [x.filename for x in self.tree]:
+        """Get the content of the hacs.json file."""
+        if not "hacs.json" in [x.filename for x in self.tree]:
             if self.racelandshop.system.action:
                 raise RacelandshopException(
-                    "::error:: No racelandshop.json file in the root of the repository."
+                    "::error:: No hacs.json file in the root of the repository."
                 )
             return
         if self.racelandshop.system.action:
-            self.logger.info("%s Found racelandshop.json", self)
+            self.logger.info("%s Found hacs.json", self)
 
         self.ref = version_to_install(self)
 
         try:
-            manifest = await self.repository_object.get_contents("racelandshop.json", self.ref)
+            manifest = await self.repository_object.get_contents("hacs.json", self.ref)
             self.repository_manifest = RacelandshopManifest.from_dict(
                 json.loads(manifest.content)
             )
@@ -371,10 +371,10 @@ class RacelandshopRepository(RepositoryHelpers):
         except (AIOGitHubAPIException, Exception) as exception:  # Gotta Catch 'Em All
             if self.racelandshop.system.action:
                 raise RacelandshopException(
-                    f"::error:: racelandshop.json file is not valid ({exception})."
+                    f"::error:: hacs.json file is not valid ({exception})."
                 ) from None
         if self.racelandshop.system.action:
-            self.logger.info("%s racelandshop.json is valid", self)
+            self.logger.info("%s hacs.json is valid", self)
 
     def remove(self):
         """Run remove tasks."""

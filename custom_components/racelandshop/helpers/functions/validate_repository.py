@@ -25,7 +25,7 @@ async def common_validate(repository, ignore_issues=False):
     repository.logger.debug("%s Checking repository.", repository)
     await common_update_data(repository, ignore_issues)
 
-    # Step 6: Get the content of racelandshop.json
+    # Step 6: Get the content of hacs.json
     await repository.get_repository_manifest_content()
 
 
