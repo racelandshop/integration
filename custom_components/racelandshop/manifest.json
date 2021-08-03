@@ -23,5 +23,5 @@
         "racelandshop_frontend==20210730.3",
         "queueman==0.5"
     ],
-    "version": "1.0.0"
+    "version": "0.0.0"
 }
